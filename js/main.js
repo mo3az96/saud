@@ -30,6 +30,36 @@ $(document).ready(function () {
             scrollTop: 0
         }, 1500);
     });
+    //////////** servs slider **//////////
+    var servswiper = new Swiper('.servs-slider .swiper-container', {
+
+        pagination: {
+            el: '.servs-slider .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
     //////////** projects slider **//////////
     var projectswiper = new Swiper('.projects-slider .swiper-container', {
         loop: true,
@@ -80,7 +110,7 @@ $(document).ready(function () {
                 spaceBetween: 30,
             },
             992: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 30,
             },
         },
