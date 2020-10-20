@@ -100,7 +100,7 @@ input[type=number] {
 
 @media (max-width: 1199px) {
   .page-content {
-    margin-top: 70px;
+    margin-top: 40px;
   }
 }
 
@@ -356,6 +356,55 @@ html[dir='rtl'] .border-btn img {
     font-size: 14px;
     margin: auto;
   }
+}
+
+.serv-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991px) {
+  .serv-btns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.serv-btns .serv-btn {
+  width: 171px;
+  height: 45px;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .serv-btns .serv-btn {
+    width: 150px;
+    height: 40px;
+  }
+}
+
+.serv-btns .serv-btn.border-btn {
+  border: 2px solid var(--main);
+  color: var(--main);
+}
+
+.serv-btns .serv-btn.border-btn:hover, .serv-btns .serv-btn.border-btn:focus {
+  background-color: var(--hover);
+  border-color: var(--hover);
+  color: var(--white);
+}
+
+html[dir='ltr'] .serv-btns .serv-btn:last-of-type {
+  margin-left: 20px;
+}
+
+html[dir='rtl'] .serv-btns .serv-btn:last-of-type {
+  margin-right: 20px;
 }
 
 .heads-holder {
@@ -2431,6 +2480,161 @@ html[dir='rtl'] .quote-div img {
           transform: translateY(-50%);
   left: 0;
   width: 100%;
+}
+
+.serv-arc {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.05fr;
+      grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+@media (min-width: 1525px) {
+  html[dir='ltr'] .serv-arc {
+    padding-left: 161px;
+    padding-right: 145px;
+  }
+  html[dir='rtl'] .serv-arc {
+    padding-right: 161px;
+    padding-left: 145px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .serv-arc {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .serv-arc {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.serv-arc .serv-img {
+  padding-bottom: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.serv-arc .serv-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.serv-arc .serv-img:hover img {
+  -webkit-transform: scale(1.05) rotate(-2.5deg);
+          transform: scale(1.05) rotate(-2.5deg);
+}
+
+.serv-arc .serv-text {
+  margin-top: 75px;
+}
+
+@media (max-width: 991px) {
+  .serv-arc .serv-text {
+    margin-top: 0;
+  }
+}
+
+.serv-arc .serv-name {
+  font-size: 30px;
+  color: var(--main);
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.serv-arc .serv-name:hover {
+  color: var(--hover);
+}
+
+.serv-arc .serv-name.xs-name {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .serv-arc .serv-name {
+    display: none;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .serv-arc .serv-name.xs-name {
+    display: inline-block;
+  }
+}
+
+.serv-arc .serv-desc {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.444;
+  margin-bottom: 43px;
+}
+
+@media (max-width: 767px) {
+  .serv-arc .serv-desc {
+    font-size: 14px;
+    text-align: justify;
+    text-align-last: center;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .serv-arc:nth-of-type(even) .serv-name {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.serv-arc:nth-of-type(even) .serv-img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.serv-arc:nth-of-type(even) .serv-text {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (max-width: 991px) {
+  .serv-arc:nth-of-type(even) .serv-text {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.services-cont {
+  margin-bottom: 220px;
+}
+
+@media (max-width: 991px) {
+  .services-cont {
+    margin-bottom: 60px;
+  }
 }
 
 .contact-sec {
