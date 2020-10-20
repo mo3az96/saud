@@ -242,6 +242,25 @@ $(document).ready(function () {
             },
         },
     });
+
+    //////////** serv-projects-slider **//////////
+    var servProjectsswiper = new Swiper('.serv-projects-slider', {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+        },
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: '.serv-projects-slider .swiper-button-next',
+            prevEl: '.serv-projects-slider .swiper-button-prev',
+        },
+        pagination: {
+            el: '.serv-projects-slider .swiper-pagination',
+            clickable: true,
+        },
+    });
     ///////// **footer** /////////
     if ($(window).width() <= 767) {
         $(".foot-acc").addClass("mo-accordion");
