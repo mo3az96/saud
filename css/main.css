@@ -1410,7 +1410,10 @@ main .down-btn {
           align-items: center;
   padding: 6px 19px;
   background-color: #fff;
-  width: 80%;
+  max-width: 80%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 16px;
   color: var(--text);
   font-weight: 600;
@@ -3017,6 +3020,39 @@ html[dir='rtl'] .quote-div img {
   opacity: 0.3;
   content: "";
   display: block;
+}
+
+.projects-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 64px 30px;
+  padding-bottom: 185px;
+}
+
+@media (max-width: 1199px) {
+  .projects-grid {
+    gap: 50px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.projects-grid .grid-item {
+  overflow: hidden;
+}
+
+.projects-grid .project .project-name {
+  visibility: visible;
+  opacity: 1;
 }
 
 .contact-sec {
