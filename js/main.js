@@ -143,7 +143,6 @@ $(document).ready(function () {
             },
         },
     });
-
     //////////** client Slider **//////////
     if ($(window).width() <= 991) {
         $(".client-item").unwrap("");
