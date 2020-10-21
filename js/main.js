@@ -302,4 +302,37 @@ $(document).ready(function () {
             $(".drop-btn .nav-a").not(this).siblings().slideUp(500);
         })
     }
+    ///////// **fancy** /////////
+    $('[data-fancybox="media"]').fancybox({
+        loop: true,
+        infobar: false,
+        margin: [44, 0, 22, 0],
+
+        thumbs: {
+            autoStart: true,
+            axis: $(window).width() <= 767 ? 'y' : 'x'
+        },
+        slideShow: {
+            autoStart: true,
+            speed: 3000
+        },
+    })
+    ///////// **fancy** /////////
+    $('[data-fancybox="project-img"]').fancybox({
+        loop: true,
+        infobar: false,
+        arrows: $(window).width() <= 767 ? true : false,
+        margin: [44, 0, 22, 0],
+        buttons: [
+            'close'
+        ],
+        thumbs: {
+            autoStart: $(window).width() <= 767 ? false : true,
+            axis: $(window).width() <= 767 ? 'y' : 'x'
+        },
+        slideShow: {
+            autoStart: true,
+            speed: 3000
+        },
+    })
 });
