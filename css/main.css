@@ -4144,6 +4144,16 @@ html[dir='rtl'] .career-item .item-text {
 @media (max-width: 991px) {
   .career-item .career-name {
     font-size: 18px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  html[dir='ltr'] .career-item .career-name {
+    margin-right: 5px;
+  }
+  html[dir='rtl'] .career-item .career-name {
+    margin-left: 5px;
   }
 }
 
@@ -4210,6 +4220,52 @@ html[dir='rtl'] .career-item .item-text {
 @media (max-width: 767px) {
   .career-item .opt {
     font-size: 14px;
+  }
+}
+
+.careers-cont .tab-ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 15px 100px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 110px;
+}
+
+@media (max-width: 767px) {
+  .careers-cont .tab-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: unset;
+    overflow-x: auto;
+    width: 100%;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    white-space: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 auto 40px;
+  }
+}
+
+.careers-cont .tab-li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .careers-cont .tab-li {
+    margin: 0 15px;
   }
 }
 
