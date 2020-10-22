@@ -7,6 +7,18 @@ $(window).on('load', function () {
 $(document).ready(function () {
     new WOW().init();
 
+    ///////// **Select & date** /////////
+    if ($(window).width() > 991) {
+        $('select').select2({
+            minimumResultsForSearch: Infinity,
+        });
+    }
+    if ($(window).width() <= 991) {
+        $("select").addClass("mobile-select");
+        $("select").wrap('<div class="mobile-select-cont"></div>');
+    }
+    $('.date input').datepicker({});
+
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 10) {
             $("header").addClass("header-scroll");
@@ -335,4 +347,20 @@ $(document).ready(function () {
             speed: 5000
         },
     })
+
+    $('input[type=radio][name=resume]').change(function () {
+        if (this.value == 'upload') {
+            $(".file-cont").slideDown();
+        }
+        else if (this.value == 'create') {
+            $(".file-cont").slideUp();
+        }
+    });
+
+    $(".career-file").change(function () {
+        var file = $('.career-file')[0].files[0]
+        if (file) {
+            $(".file .career-input").text(file.name)
+        }
+    });
 });
