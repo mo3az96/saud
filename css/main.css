@@ -1419,23 +1419,6 @@ nav.nav-in .nav-li {
   .fancybox-progress {
     background-color: var(--main);
   }
-  .fancybox-button {
-    background-color: transparent;
-    color: #fff;
-    padding: 0;
-    width: auto;
-    height: auto;
-    top: 30px;
-    font-size: 48px;
-    right: 40px;
-  }
-  .fancybox-button svg {
-    display: none;
-  }
-  .fancybox-button::after {
-    font-family: 'Linearicons-Free';
-    content: "\e870";
-  }
   .fancybox-thumbs {
     top: auto;
     width: auto;
@@ -2378,7 +2361,7 @@ header {
 
 header.header-scroll {
   background-color: var(--main);
-  padding: 25px 0;
+  padding: 10px 0;
 }
 
 @media (max-width: 767px) {
@@ -2682,18 +2665,22 @@ html[dir='rtl'] .about-imgs {
 }
 
 .page-content .clients-sec {
-  margin-top: 240px;
+  margin-top: 0;
+  margin-top: 100px;
+  padding-top: 140px;
 }
 
 @media (max-width: 1199px) {
   .page-content .clients-sec {
-    margin-top: 70px;
+    margin-top: 0;
+    padding-top: 70px;
   }
 }
 
 @media (max-width: 991px) {
   .page-content .clients-sec {
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 40px;
   }
 }
 
@@ -2703,12 +2690,14 @@ html[dir='rtl'] .about-imgs {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 30px;
-  margin-top: 250px;
+  margin-top: 100px;
+  padding-top: 150px;
 }
 
 @media (max-width: 1199px) {
   .chairman-flex {
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 40px;
   }
 }
 
@@ -2783,12 +2772,14 @@ html[dir='rtl'] .quote-div img {
 }
 
 .history-cont {
-  margin-top: 240px;
+  margin-top: 100px;
+  padding-top: 140px;
 }
 
 @media (max-width: 1199px) {
   .history-cont {
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 40px;
   }
 }
 
@@ -2838,7 +2829,8 @@ html[dir='rtl'] .quote-div img {
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   gap: 30px;
-  margin-top: 240px;
+  margin-top: 100px;
+  padding-top: 140px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2847,7 +2839,8 @@ html[dir='rtl'] .quote-div img {
 @media (max-width: 991px) {
   .awwards-flex {
     display: block;
-    margin-top: 40px;
+    margin-top: 0;
+    padding-top: 40px;
     text-align: center;
   }
 }
@@ -4708,7 +4701,7 @@ html[dir='rtl'] .single-job .item-text {
       -ms-flex-order: 2;
           order: 2;
   font-size: 15px;
-  color: #c33332;
+  color: #ff0200;
 }
 
 html[dir='ltr'] .career-label span {
@@ -4950,7 +4943,7 @@ html[dir='rtl'] .select2-container .select2-selection .select2-selection__render
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 2;
-  background-color: #f3f3f3;
+  background-color: #fff;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.23);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.23);
   margin: 10px 0 0;
@@ -4978,7 +4971,7 @@ html[dir='rtl'] .select2-container .select2-selection .select2-selection__render
 .select2-dropdown .select2-results .select2-results__options .select2-results__option {
   font-size: 15px;
   color: var(--text);
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 0 20px;
   margin-bottom: 7px;
 }
@@ -4991,11 +4984,11 @@ html[dir='rtl'] .select2-container .select2-selection .select2-selection__render
   color: var(--main);
 }
 
-.date {
+.input-cont .date {
   position: relative;
 }
 
-.date::after {
+.input-cont .date::after {
   font-family: 'Linearicons-Free';
   content: "\e874";
   font-size: 16px;
@@ -5007,11 +5000,11 @@ html[dir='rtl'] .select2-container .select2-selection .select2-selection__render
   color: #8c8c8c;
 }
 
-html[dir='ltr'] .date::after {
+html[dir='ltr'] .input-cont .date::after {
   right: 23px;
 }
 
-html[dir='rtl'] .date::after {
+html[dir='rtl'] .input-cont .date::after {
   left: 23px;
 }
 
